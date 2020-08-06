@@ -1,0 +1,14 @@
+{
+  "name": "epl-app",
+  "version": "1.0.0",
+  "description": "Premier League Information APP",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yusharnadi",
+  "license": "ISC",
+  "dependencies": {
+    "web-push": "^3.4.4"
+  }
+}

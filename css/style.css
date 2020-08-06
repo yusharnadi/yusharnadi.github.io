@@ -1,0 +1,19 @@
+.m-top-10 {
+	margin-top: 2rem;
+}
+.m-top-20 {
+	margin-top: 4rem;
+}
+.m-b-40 {
+	margin-bottom: 6rem;
+}
+
+.img-card {
+	height: 150px;
+}
+/* 
+@media (max-width: 576px) {
+	.valign-wrapper {
+		flex-direction: column;
+	}
+} */
