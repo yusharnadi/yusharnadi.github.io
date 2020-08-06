@@ -44,19 +44,23 @@ function urlBase64ToUint8Array(base64String) {
 }
 
 if ("Notification" in window) {
-	Notification.requestPermission().then(function (result) {
-		if (result === "denied") {
-			console.log("Fitur notifikasi tidak diijinkan.");
-			return;
-		} else if (result === "default") {
-			console.error("Pengguna menutup kotak dialog permintaan ijin.");
-			return;
-		} else if (result === "granted") {
-			navigator.serviceWorker.getRegistration().then(function (serviceWorkerRegistration) {
-				serviceWorkerRegistration.showNotification("Notifikasi diijinkan!", { icon: "/images/logo.png" });
-			});
-		} else {
-			console.log("Dialog Box didnt open");
-		}
-	});
+	Notification.requestPermission()
+		.then(function (result) {
+			if (result === "denied") {
+				console.log("Fitur notifikasi tidak diijinkan.");
+				return;
+			} else if (result === "default") {
+				console.error("Pengguna menutup kotak dialog permintaan ijin.");
+				return;
+			} else if (result === "granted") {
+				navigator.serviceWorker.getRegistration().then(function (serviceWorkerRegistration) {
+					serviceWorkerRegistration.showNotification("Notifikasi diijinkan!", { icon: "/images/logo.png" });
+				});
+			} else {
+				console.log("Dialog Box didnt open");
+			}
+		})
+		.catch(function () {
+			console.log("Notifikasi Tidak Di Ijinkan");
+		});
 }
