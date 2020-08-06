@@ -1,6 +1,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 workbox.precaching.precacheAndRoute([
+	{ url: "/", revision: "1" },
 	{ url: "/index.html", revision: "1" },
 	{ url: "/nav.html", revision: "1" },
 	{ url: "/css/materialize.min.css", revision: "1" },
